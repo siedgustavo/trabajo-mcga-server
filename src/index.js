@@ -42,8 +42,10 @@ app.post("/login", (req, res) => {
 
     }
 
-    res.status(200).send("server working")
-  
+    return res.status(200).send({
+        success: true,
+        message: "OK"
+    })  
 })
 
 app.listen(4000, () => {
